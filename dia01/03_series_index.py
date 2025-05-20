@@ -11,8 +11,7 @@ series_idades = pd.Series(idades)
 series_idades
 
 # %%
-idades[0]
-series_idades[0]
+print(series_idades[0])
 
 # %%
 series_idades[-1]
