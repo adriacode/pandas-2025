@@ -1,6 +1,6 @@
 # Pandas 2025
 
-Curso renovado de Pandas realizado ao vivo de form gratuita, com gravação disponível no [YouTube](youtube.com/@teomewhy).
+Curso renovado de Pandas realizado ao vivo de forma gratuita, com gravação disponível no [YouTube](youtube.com/@teomewhy).
 
 ## Pré-requisito
 
