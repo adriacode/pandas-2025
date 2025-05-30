@@ -23,3 +23,17 @@ clientes.sort_values(by="qtdePontos", ascending=False).head(1)["idCliente"]
 clientes.sort_values(by="qtdePontos", ascending=True).head(1)["idCliente"]
 # %%
 # 05.05 - Selecione a primeira transação diária de cada cliente.
+transacoes["data"] = pd.to_datetime(transacoes["dtCriacao"]).dt.date
+
+transacoes = transacoes.sort_values(by="dtCriacao")
+transacoes.drop_duplicates(keep="first", subset=["idCliente", "data"])
+
+# %%
+
+transacoes = transacoes.sort_values(by="dtCriacao")
+
+first = transacoes.drop_duplicates(keep="first", subset=["idCliente", "data"])
+
+last = transacoes.drop_duplicates(keep="last", subset=["idCliente", "data"])
+
+pd.concat([last, first])
