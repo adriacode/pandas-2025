@@ -20,3 +20,11 @@ kmean.fit(df[['totalRevenue', 'qtSalles']])
 
 df["cluster"] = kmean.labels_
 df
+
+# %%
+
+df.to_sql("sellers _cluster", 
+          con=engine, 
+          index=False, 
+          if_exists="replace"
+          )
